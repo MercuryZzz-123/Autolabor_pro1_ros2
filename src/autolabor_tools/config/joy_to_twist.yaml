@@ -1,0 +1,29 @@
+joy_to_twist_node:
+  ros__parameters:
+    input_topic: "/joy"
+    output_topic: "/cmd_vel"
+
+    require_enable_buttons: true
+    l1_button: 4
+    r1_button: 5
+
+    left_stick_x_axis: 0
+    left_stick_y_axis: 1
+    invert_linear: false
+    invert_angular: false
+    deadzone: 0.1
+    joy_timeout: 0.5
+    publish_rate: 20.0
+
+    linear_min: 0.1
+    linear_max: 1.0
+    linear_step: 0.1
+
+    angular_min: 0.1
+    angular_max: 1.0
+    angular_step: 0.1
+
+    linear_increase_button: -1
+    linear_decrease_button: -1
+    angular_increase_button: -1
+    angular_decrease_button: -1

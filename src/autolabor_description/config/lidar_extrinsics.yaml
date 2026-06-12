@@ -1,0 +1,16 @@
+# Mid360 相对 base_link 的安装外参。
+# 换车 / 换雷达安装位置时,只改这个文件即可。
+# 默认数值来自 running2 bag 自带的 /tf_static(录制时实车上的标定值)。
+base_frame: base_link
+lidar_frame: livox_frame
+
+# 平移(米)
+x: 0.12057
+y: 0.02329
+z: 0.30881
+
+# 旋转(欧拉角,单位:度) roll-pitch-yaw
+# pitch≈29.45 表示 Mid360 绕 Y 轴向前下俯约 29.45°(非水平安装)
+roll: 0.0
+pitch: 29.45
+yaw: 0.0

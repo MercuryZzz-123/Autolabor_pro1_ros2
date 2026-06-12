@@ -1,0 +1,14 @@
+keyboard_control_node:
+  ros__parameters:
+    port_name: ""
+    output_topic: "/cmd_vel"
+
+    linear_min: 0.2
+    linear_max: 2.0
+    linear_step: 0.2
+
+    angular_min: 0.5
+    angular_max: 4.0
+    angular_step: 0.2
+
+    rate: 10.0

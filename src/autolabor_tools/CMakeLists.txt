@@ -9,11 +9,31 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+
+add_executable(keyboard_control_node src/keyboard_control_node.cpp)
+ament_target_dependencies(keyboard_control_node
+  rclcpp
+  geometry_msgs
+)
+
+add_executable(joy_to_twist_node src/joy_to_twist_node.cpp)
+ament_target_dependencies(joy_to_twist_node
+  rclcpp
+  geometry_msgs
+  sensor_msgs
+)
 
 install(DIRECTORY launch config
   DESTINATION share/${PROJECT_NAME}
   OPTIONAL
+)
+
+install(TARGETS
+  keyboard_control_node
+  joy_to_twist_node
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 if(BUILD_TESTING)

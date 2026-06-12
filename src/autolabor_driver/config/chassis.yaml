@@ -1,0 +1,19 @@
+autolabor_driver:
+  ros__parameters:
+    port_name: "/dev/autolabor_pro1"
+    odom_frame: "odom"
+    base_frame: "base_link"
+
+    baud_rate: 115200
+    control_rate: 10
+    sensor_rate: 5
+
+    reduction_ratio: 1.0
+    encoder_resolution: 1600.0
+
+    wheel_diameter: 0.25
+    model_param_cw: 0.80
+    model_param_acw: 0.80
+    pid_rate: 50.0
+    maximum_encoding: 32.0
+    publish_tf: false

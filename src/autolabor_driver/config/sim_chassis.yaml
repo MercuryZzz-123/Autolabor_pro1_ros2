@@ -1,0 +1,9 @@
+sim_autolabor_driver:
+  ros__parameters:
+    port_name: "/dev/ttyUSB0"
+    baud_rate: 115200
+    control_rate: 10
+    pid_rate: 50
+    left_wheel: 0
+    right_wheel: 0
+    run_flag: true

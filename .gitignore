@@ -25,3 +25,24 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Runtime recordings and generated robot data
+*.bag
+*.db3
+*.mcap
+*.pcd
+/running2/
+/running2_map.*
+/running2_map_v2.*
+/running2_topview.*
+
+# Local archive/backups
+/src/autolabor_description/urdf/second_generation_model1.zip
+
+# Experiment outputs and editor backups
+output/
+*.bak
+
+# Private: real site maps and on-site debug notes (not for public repo)
+/src/autolabor_navigation/maps/
+/docs/

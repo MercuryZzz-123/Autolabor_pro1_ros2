@@ -2,9 +2,6 @@
 
 Shared interface package.
 
-Planned scope:
+Current interfaces:
 
-- Store custom messages in `msg/`.
-- Store custom services in `srv/`.
-- Store custom actions in `action/`.
-- Keep interface definitions separate so driver, navigation, and tools packages can depend on them cleanly.
+- `Encode.msg`: left/right wheel encode values used by the chassis serial debug driver.

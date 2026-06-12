@@ -7,13 +7,28 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
+
+add_executable(pointcloud_to_scan_node src/pointcloud_to_scan_node.cpp)
+ament_target_dependencies(pointcloud_to_scan_node
+  geometry_msgs
+  rclcpp
+  sensor_msgs
+  tf2
+  tf2_ros
+)
 
 install(DIRECTORY launch config maps rviz
   DESTINATION share/${PROJECT_NAME}
   OPTIONAL
+)
+
+install(TARGETS pointcloud_to_scan_node
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 if(BUILD_TESTING)
